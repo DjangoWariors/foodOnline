@@ -5,6 +5,8 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from psycopg2 import connect
 
 
+
+
 # Create your models here.
 
 class UserManager(BaseUserManager):
@@ -41,11 +43,11 @@ class UserManager(BaseUserManager):
         return user
 
 class User(AbstractBaseUser):
-    RESTAURENT = 2
-    CUSTOMER = 1
+    Vendor = 1
+    CUSTOMER = 2
 
     ROLE_CHOICE = (
-        (RESTAURENT, 'RESTAURENT'),
+        (Vendor, 'Vendor'),
         (CUSTOMER, 'CUSTOMER'),
     )
 
